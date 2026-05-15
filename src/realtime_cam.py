@@ -87,8 +87,8 @@ class RealtimeCameraApp:
         return False
 
 if __name__ == '__main__':
-    model_path = r"D:\Project\Lab2\25-04-2026 ( argument )\No cutout\Chess_Project (No cutout)\weights\best.pt"
+    model_path = r"D:\GitHub\ChessDectection-with-YOLO\Data\25-04-2026\Chess_Project (No cutout)\weights\best.pt"
     # Khởi tạo đối tượng Core, tiêm (inject) nó vào ứng dụng Camera
     chess_ai = ChessDetector(model_path=model_path, conf_threshold=0.6)
-    app = RealtimeCameraApp(detector=chess_ai, camera_index=1, flip_mode=0)
+    app = RealtimeCameraApp(detector=chess_ai, camera_index=0, flip_mode=0)
     app.run()
